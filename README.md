@@ -2,6 +2,8 @@
 
 An example GPT bot that can quickly read a lot of text or documentation and then answers questions about it.
 
+<img src="https://i.imgur.com/hgBoKUV.png" width="574">
+
 ## Usage
 
 First you will need to get an OpenAI API key. You can get one [here](https://beta.openai.com/), and will have $18 of free credits to start with. 

@@ -7,6 +7,9 @@ app = Flask(__name__, static_folder='.')
 llm_predictor = LLMPredictor(llm=OpenAI(temperature=0, model_name="text-davinci-003", max_tokens=1024))
 index = GPTSimpleVectorIndex.load_from_disk('data.json', llm_predictor=llm_predictor)
 
+# If you don't care about long answers, you can initialize the index with default 256 token limit simply by:
+# index = GPTSimpleVectorIndex.load_from_disk('data.json')
+
 @app.route('/answer', methods=['GET'])
 def question():
     question = request.args.get('question')
